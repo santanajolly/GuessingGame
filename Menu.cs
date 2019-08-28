@@ -13,12 +13,14 @@ namespace GuessingGame
         public void MenuOption()
         {
             HumanGame human = new HumanGame();
+            ComputerGame comp = new ComputerGame();
             int count = 0;
-            
+
+                Console.Clear();
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine(@"   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*   *-*-*-*-*-*-*-*    ");
-                Console.WriteLine($"   !   ___                  __  __         _           !   !  Attempts: {count} !    ");
-                Console.WriteLine($@"   !  / __|_  _ ___ ______ |  \/  |__ _ __| |_ ___ _ _ !   *-*-*-*-*-*-*-*               ");
+                Console.WriteLine(@"   *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*      ");
+                Console.WriteLine($"   !   ___                  __  __         _           !      ");
+                Console.WriteLine($@"   !  / __|_  _ ___ ______ |  \/  |__ _ __| |_ ___ _ _ !              ");
                 Console.WriteLine(@"   ! | (_ | || / -_|_-<_-< | |\/| / _` (_-<  _/ -_) '_|!     ");
                 Console.WriteLine(@"   !  \___|\_,_\___/__/__/ |_|  |_\__,_/__/\__\___|_|  !                    ");
                 Console.WriteLine(@"   !                                                   !                 ");
@@ -40,12 +42,14 @@ namespace GuessingGame
                         break;
                     case "2":
                         //Console.Clear();
+                        Console.WriteLine("\nCan the computer guess your number? Let's find out!");
+                        comp.ComputerGuess();
                         break;
                     default:
-                    Console.WriteLine("That is not an option");
-                    Console.ReadLine();
-                    Console.Clear();
-                    MenuOption();
+                        Console.WriteLine("\nThat is not an option");
+                        Console.ReadLine();
+                        Console.Clear();
+                        MenuOption();
                         break;
 
                 }
